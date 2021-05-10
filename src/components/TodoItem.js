@@ -57,6 +57,7 @@ const TodoItem = ({ todo }) => {
         </span>
       ) : (
         <input
+        ref={ref}
           type="text"
           className="py-2 w-100"
           value={name}
@@ -74,7 +75,7 @@ const TodoItem = ({ todo }) => {
         />
       )}
         </div>
-        <span ref={ref} className="fw-bolder p-2 fs-5 remove-icon" onClick={()=> dispatch(deleteTodos(todo._id))}>
+        <span  className="fw-bolder p-2 fs-5 remove-icon" onClick={()=> dispatch(deleteTodos(todo._id))}>
           x
         </span>
     </div>
